@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Employee()
+comment1.params=name\ num\ dept\ type
+comment1.target=Employee(java.lang.String,\ java.lang.String,\ java.lang.String,\ char)
+comment10.params=
+comment10.target=void\ writeData()
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=java.lang.String\ getNum()
+comment4.params=
+comment4.target=java.lang.String\ getDept()
+comment5.params=
+comment5.target=char\ getType()
+comment6.params=empName
+comment6.target=void\ setName(java.lang.String)
+comment7.params=empNum
+comment7.target=void\ setEmpNum(java.lang.String)
+comment8.params=department
+comment8.target=void\ setDept(java.lang.String)
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=11
