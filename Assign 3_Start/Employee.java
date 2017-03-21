@@ -3,19 +3,18 @@ public class Employee
     protected String name;
     protected String num;
     protected String dept;
-    protected char type;
+    protected String type;
 
     public Employee()
     {
 
     }
 
-    public Employee(String name, String num, String dept, char type)
+    public Employee(String name, String num, String dept)
     {
         name = "";
         num = "";
         dept = "";
-        type = ' ';
     }
 
     public String getName()
@@ -33,7 +32,7 @@ public class Employee
         return dept;
     }
 
-    public char getType()
+    public String getType()
     {
         return type;
     }

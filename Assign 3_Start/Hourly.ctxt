@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Hourly()
-comment1.params=name\ num\ dept\ type
-comment1.target=Hourly(java.lang.String,\ java.lang.String,\ java.lang.String,\ char)
+comment1.params=name\ num\ dept\ hoursWorked\ hourlyRate
+comment1.target=Hourly(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ double)
 comment2.params=
 comment2.target=int\ getHoursWorked()
 comment3.params=

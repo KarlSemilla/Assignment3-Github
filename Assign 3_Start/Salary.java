@@ -7,9 +7,9 @@ public class Salary extends Employee
     
     }
     
-    public Salary(String name, String num, String dept, char type)
+    public Salary(String name, String num, String dept, double yearlySalary)
     {
-        super(name, num, dept, type);
+        super(name, num, dept);
         yearlySalary = 0.0;
     }
     

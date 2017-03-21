@@ -8,9 +8,9 @@ public class Hourly extends Employee
     
     }
     
-    public Hourly(String name, String num, String dept, char type)
+    public Hourly(String name, String num, String dept, int hoursWorked, double hourlyRate)
     {
-        super(name, num, dept, type);
+        super(name, num, dept);
         hoursWorked = 0;
         hourlyRate = 0.0;
     }

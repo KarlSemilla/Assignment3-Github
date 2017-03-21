@@ -1,6 +1,7 @@
 public class Commission extends Employee
 {
     private int employWeeks;
+    private double baseSalary;
     private double weeklySales;
     private double yearlySales;
     private double comRate;
@@ -10,17 +11,24 @@ public class Commission extends Employee
     
     }
     
-    public Commission(String name, String num, String dept, char type)
+    public Commission(String name, String num, String dept, int employWeeks,
+           double baseSalary, double weeklySales, double yearlySales, double comRate)
     {
-        super(name, num, dept, type);
+        super(name, num, dept);
         employWeeks = 0;
+        baseSalary = 0;
         yearlySales = 0.0;
         comRate = 0.0;
     }
     
-    public double getEmployWeeks()
+    public int getEmployWeeks()
     {
         return employWeeks;
+    }
+    
+    public double getBaseSalary()
+    {
+        return baseSalary;
     }
     
     public double getWeeklySales()
@@ -41,6 +49,11 @@ public class Commission extends Employee
     public void setEmployWeeks(int empWeeks)
     {
         employWeeks = empWeeks;
+    }
+    
+    public void setBaseSalary(double bSalary)
+    {
+        baseSalary = bSalary;
     }
     
     public void setWeeklySales(double wkSales)
