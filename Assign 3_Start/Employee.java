@@ -53,20 +53,29 @@ public class Employee
         dept = department;
     }
 
-    public boolean topSeller()
-    {
-        boolean topSell = false;
-        
-        
+    public boolean equals(Employee e)
+    {   
+        boolean check = false;
+        if(e.getName() == name){
+            check = true;
+        }
+        return check;
     }
     
     public String toString()
     {
-        return "";
+        String result;
+        
+        result = name + "   " + num + "   " + dept + "   " + type;
+        
+        return result;
     }
 
     public void writeData()
     {
-
+        System.out.println("Employee Name: " + name + "\n"
+                            + "Employee ID: " + num + "\n"
+                            + "Department: " + dept + "\n"
+                            + "Type: " + type + "\n");
     }
 }

@@ -37,6 +37,9 @@ public class Salary extends Employee
     
     public void writeData()
     {
+        super.writeData();
+        System.out.print("Employee yearly salary: " + yearlySalary);
         
+        System.out.println();
     }
 }

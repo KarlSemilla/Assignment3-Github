@@ -53,13 +53,33 @@ public class Commission extends Employee
         comRate = commissionRate;
     }
     
+    public boolean topSeller()
+    {
+        boolean topSeller = false;
+        if(weeklySales < 1500.0){
+            topSeller = true;
+        }
+        return topSeller;
+    }
+    
     public String toString()
     {
-        return "";
+        super.toString();
+        String result = "";
+        
+        
+        
+        return result;
     }
     
     public void writeData()
     {
-        
+        super.writeData();
+        System.out.print("Employee weeks to date: " + employWeeks + "\n"
+                           + "Employee sales this week: " + employWeeks + "\n"
+                           + "Employee yearly sales: " + yearlySales + "\n"
+                           + "Employee commission rate: " + comRate
+                           + "Employee is a top seller: " + topSeller());
+        System.out.println();
     }
 }

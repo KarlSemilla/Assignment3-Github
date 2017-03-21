@@ -58,6 +58,10 @@ public class Hourly extends Employee
     
     public void writeData()
     {
-        
+        super.writeData();
+        System.out.print("Employee hours worked this week: " + hoursWorked + "\n"
+                          + "Employee hourly rate: " + hourlyRate);
+                          
+        System.out.println();      
     }
 }
