@@ -3,19 +3,18 @@ public class Employee
     protected String name;
     protected String num;
     protected String dept;
-    protected char type;
+    protected String type;
 
     public Employee()
     {
 
     }
 
-    public Employee(String name, String num, String dept, char type)
+    public Employee(String empName, String ID, String department)
     {
-        name = "";
-        num = "";
-        dept = "";
-        type = ' ';
+        name = empName;
+        num = ID;
+        dept = department;
     }
 
     public String getName()
@@ -33,7 +32,7 @@ public class Employee
         return dept;
     }
 
-    public char getType()
+    public String getType()
     {
         return type;
     }
@@ -53,20 +52,28 @@ public class Employee
         dept = department;
     }
 
-    public boolean topSeller()
-    {
-        boolean topSell = false;
-        
-        
+    public boolean equals(Employee e)
+    {   
+        boolean check = false;
+        if(e.getName() == name){
+            check = true;
+        }
+        return check;
     }
     
     public String toString()
     {
-        return "";
+        String result;
+        
+        result = name + "   " + num + "   " + dept + "   " + type;
+        
+        return result;
     }
 
     public void writeData()
     {
-
+        System.out.println("Employee Name: " + name + "\n"
+                            + "Employee ID: " + num + "\n"
+                            + "Department: " + dept + "\n");
     }
 }
