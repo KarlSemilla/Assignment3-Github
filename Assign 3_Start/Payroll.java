@@ -40,6 +40,13 @@ public class Payroll
         }
         empFile.close();
     }
+    
+    public String askUser()
+    {
+        Scanner input = new Scanner(System.in);
+        String information = input.next();
+        return information;
+    }
 
     public Employee validateName(String name)
     {        
@@ -47,7 +54,7 @@ public class Payroll
 
         for(int i = 0; i < emp.size(); i++)
         {
-            if (emp.get(i).getName().equals(name))
+            if (emp.get(i).getName().equalsIgnoreCase(name))
             {
                 foundName = emp.get(i);
             }        
@@ -91,11 +98,13 @@ public class Payroll
             double hourlyRate = scan.nextDouble();
             
             hour = (new Hourly(name, ID, dept, hoursWorked, hourlyRate));
+            emp.add(hour);
         }
         else if(type.equalsIgnoreCase("S") || type.equalsIgnoreCase("Salary")){
             System.out.println("Enter the employee's yearly salary: ");
             double yearlySal = scan.nextDouble();
             hour = (new Salary(name, ID, dept, yearlySal));
+            emp.add(hour);
         }
         else if(type.equalsIgnoreCase("C") || type.equalsIgnoreCase("Commission")){
             System.out.println("Enter the weeks the employee has worked this month: ");
@@ -110,6 +119,16 @@ public class Payroll
             double cRate = scan.nextDouble();
             commission = (new Commission(name, ID, dept, employeeWeeks, bSalary,
                                 weekSales, yrSales, cRate));
+            emp.add(commission);
+        }
+    }
+    
+    public void testPrint()
+    {
+        for(int i = 0; i < emp.size(); i++)
+        {
+            System.out.println(emp.get(i).getName());
+            
         }
     }
 }

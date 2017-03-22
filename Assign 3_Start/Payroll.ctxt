@@ -1,10 +1,14 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ loadData()
-comment1.params=name
-comment1.target=Employee\ validateName(java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ askUser()
 comment2.params=name
-comment2.target=void\ addEmployee(java.lang.String)
+comment2.target=Employee\ validateName(java.lang.String)
 comment3.params=name
-comment3.target=void\ scanInfo(java.lang.String)
-numComments=4
+comment3.target=void\ addEmployee(java.lang.String)
+comment4.params=name
+comment4.target=void\ scanInfo(java.lang.String)
+comment5.params=
+comment5.target=void\ testPrint()
+numComments=6
