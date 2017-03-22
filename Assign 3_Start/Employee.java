@@ -42,7 +42,7 @@ public class Employee
         name = empName;
     }
 
-    public void setEmpNum(String empNum)
+    public void setNum(String empNum)
     {
         num = empNum;
     } 
@@ -55,10 +55,15 @@ public class Employee
     public boolean equals(Employee e)
     {   
         boolean check = false;
-        if(e.getName() == name){
+        if(e.getNum() == num){
             check = true;
         }
         return check;
+    }
+    
+    public double calcWeeklySalary()
+    {
+        return 0;
     }
     
     public String toString()

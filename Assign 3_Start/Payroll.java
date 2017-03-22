@@ -41,45 +41,45 @@ public class Payroll
         empFile.close();
     }
 
-    public Employee validateName(String name)
+    public Employee validateNum(String num)
     {        
-        Employee foundName = null;
+        Employee foundNum = null;
 
         for(int i = 0; i < emp.size(); i++)
         {
-            if (emp.get(i).getName().equals(name))
+            if (emp.get(i).getNum().equals(num))
             {
-                foundName = emp.get(i);
+                foundNum = emp.get(i);
             }        
         }
 
-        return foundName;
+        return foundNum;
     }
 
-    public void addEmployee(String name)
+    public void addEmployee(String num)
     {
         Employee check = null;
-        check = validateName(name);
+        check = validateNum(num);
 
         if(check != null){
             System.out.println("Employee cannot be created. Employee already exists.");
         }
         else{
             System.out.println("Employee was not found. New employee will be created.");
-            scanInfo(name);
-            System.out.println("Employee: " + name + " was created.");
+            scanInfo(num);
+            System.out.println("Employee: " + num + " was created.");
         }
     }
 
-    public void scanInfo(String name)
+    public void scanInfo(String num)
     {
         Scanner scan = new Scanner(System.in);
         Employee hour = new Hourly();
         Employee salary = new Salary();
         Employee commission = new Commission();
 
-        System.out.println("Enter employee ID: ");
-        String ID = scan.nextLine();
+        System.out.println("Enter employee's name: ");
+        String name = scan.nextLine();
         System.out.println("Enter employee's department: ");
         String dept = scan.nextLine();
         System.out.println("Enter the employee's pay type(hourly, salary, commission): ");
@@ -90,13 +90,13 @@ public class Payroll
             System.out.println("Enter the hourly rate of the employee: ");
             double hourlyRate = scan.nextDouble();
 
-            hour = (new Hourly(name, ID, dept, hoursWorked, hourlyRate));
+            hour = (new Hourly(name, num, dept, hoursWorked, hourlyRate));
             emp.add(hour);
         }
         else if(type.equalsIgnoreCase("S") || type.equalsIgnoreCase("Salary")){
             System.out.println("Enter the employee's yearly salary: ");
             double yearlySal = scan.nextDouble();
-            salary = (new Salary(name, ID, dept, yearlySal));
+            salary = (new Salary(name, num, dept, yearlySal));
             emp.add(salary);
         }
         else if(type.equalsIgnoreCase("C") || type.equalsIgnoreCase("Commission")){
@@ -110,7 +110,7 @@ public class Payroll
             double yrSales = scan.nextDouble();
             System.out.println("Enter the employee's commission rate: " );
             double cRate = scan.nextDouble();
-            commission = (new Commission(name, ID, dept, employeeWeeks, bSalary,
+            commission = (new Commission(name, num, dept, employeeWeeks, bSalary,
                     weekSales, yrSales, cRate));
             emp.add(commission);
         }
@@ -119,52 +119,74 @@ public class Payroll
 
     }
 
-    public void printEmployeeInfo(String name)
+    public void printEmployeeInfo(String num)
     {
         Employee check = null;
-        check = validateName(name);
+        check = validateNum(num);
         if(check != null){
             check.writeData();
         }
         else
-            System.out.println("Employee: " + name + ", could not be found.");
+            System.out.println("Employee: " + num + ", could not be found.");
     }
 
-    public void deleteEmployeeProfile(String name)
+    public void deleteEmployeeProfile(String num)
     {
         Scanner scan = new Scanner(System.in);
         Employee check = null;
-        check = validateName(name);
+        check = validateNum(num);
         String user = "";
         int pos = 0;
         int i = 0;
         if(check != null){
-            System.out.print("Delete user " + name + " from the system?(Y/N): ");
+            System.out.print("Delete user " + num + " from the system?(Y/N): ");
             user = scan.next();
             while(i == 0){
                 if(user.equalsIgnoreCase("y")){
-                    System.out.println("Employee " + name + " will be deleted.");
-                    pos = employeePosition(name);
+                    System.out.println("Employee " + num + " will be deleted.");
+                    pos = employeePosition(num);
                     emp.remove(pos);
                     i++;
                 }
                 else if(user.equalsIgnoreCase("n")){
-                    System.out.println("Employee " + "'" + name + "'" + " will not be deleted.");
+                    System.out.println("Employee " + "'" + num + "'" + " will not be deleted.");
                     i++;
                 }
+                else
+                    System.out.println("Please enter a valid employee number.");
             }
         }
     }
 
-    public int employeePosition(String name){
+    public int employeePosition(String num){
         int y = 0;
         for(int i = 0; i < emp.size(); i++){
-            if (emp.get(i).getName().equals(name))
+            if (emp.get(i).getNum().equals(num))
             {
                 y = i;
             }  
         }
 
         return y;
+    }
+
+    public void printWeeklySalary(String num)
+    {
+        Employee check = null;
+        check = validateNum(num);
+        boolean verify = false;
+        double sal = 0.0;
+        int i = 0;
+        if(check != null){
+            while(i < emp.size()){
+                if(emp.get(i).equals(check)){
+                    sal = emp.get(i).calcWeeklySalary();
+                    System.out.println("" + check.getName() + "'s weekly salary is: " + sal);
+                }
+                i++;
+            }
+        }
+        else 
+            System.out.println("Employee: " + num + " was not found.");
     }
 }

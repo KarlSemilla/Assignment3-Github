@@ -1,16 +1,18 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ loadData()
-comment1.params=name
-comment1.target=Employee\ validateName(java.lang.String)
-comment2.params=name
+comment1.params=num
+comment1.target=Employee\ validateNum(java.lang.String)
+comment2.params=num
 comment2.target=void\ addEmployee(java.lang.String)
-comment3.params=name
+comment3.params=num
 comment3.target=void\ scanInfo(java.lang.String)
-comment4.params=name
+comment4.params=num
 comment4.target=void\ printEmployeeInfo(java.lang.String)
-comment5.params=name
+comment5.params=num
 comment5.target=void\ deleteEmployeeProfile(java.lang.String)
-comment6.params=name
+comment6.params=num
 comment6.target=int\ employeePosition(java.lang.String)
-numComments=7
+comment7.params=num
+comment7.target=void\ printWeeklySalary(java.lang.String)
+numComments=8

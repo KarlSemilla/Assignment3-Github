@@ -6,9 +6,11 @@ public class Client
         // define necessary variables here
         Payroll p = new Payroll();
         p.loadData();
-        p.printEmployeeInfo("Sally");
-        p.deleteEmployeeProfile("Sally");
-        p.printEmployeeInfo("Sally");
+        //p.printEmployeeInfo("111-111-111");
+        //p.deleteEmployeeProfile("111-111-111");
+        //p.printEmployeeInfo("111-111-111");
+        p.printEmployeeInfo("222-222-222");
+        p.printWeeklySalary("222-222-222");
         // place here the code for the processing requirements
         System.out.println ("Thank you for using the Payroll Processing System");
     }
