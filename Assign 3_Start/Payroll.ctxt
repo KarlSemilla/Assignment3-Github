@@ -15,4 +15,6 @@ comment6.params=num
 comment6.target=int\ employeePosition(java.lang.String)
 comment7.params=num
 comment7.target=void\ printWeeklySalary(java.lang.String)
-numComments=8
+comment8.params=
+comment8.target=void\ printWeeklyReport()
+numComments=9

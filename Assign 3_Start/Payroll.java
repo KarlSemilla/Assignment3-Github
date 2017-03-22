@@ -189,4 +189,6 @@ public class Payroll
         else 
             System.out.println("Employee: " + num + " was not found.");
     }
+    
+    public void printWeeklyReport(){}
 }
