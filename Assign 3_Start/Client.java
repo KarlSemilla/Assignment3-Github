@@ -9,7 +9,13 @@ public class Client
         Scanner keyboard = new Scanner(System.in);
         String input = "";
         p.loadData();
+        //p.printEmployeeInfo("111-111-111");
+        //p.deleteEmployeeProfile("111-111-111");
+        //p.printEmployeeInfo("111-111-111");
+        p.printEmployeeInfo("222-222-222");
+        p.printWeeklySalary("222-222-222");
         // place here the code for the processing requirements
+<<<<<<< HEAD
         showMenu();
         System.out.println("Please choose one of the menu options: ");
         String inputChoice = keyboard.next().toUpperCase();
@@ -32,6 +38,8 @@ public class Client
             inputChoice = keyboard.next().toUpperCase();
             choice = inputChoice.charAt(0);
         }
+=======
+>>>>>>> origin/Karl-Branch
         System.out.println ("Thank you for using the Payroll Processing System");
     }
 

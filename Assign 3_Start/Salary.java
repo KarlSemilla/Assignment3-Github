@@ -26,7 +26,9 @@ public class Salary extends Employee
     public double calcWeeklySalary()
     {
         double take = 0.0;
-        take = yearlySalary * (1 / 52);
+        //double weeklySal = 0.0;
+        take = yearlySalary * (1.0 / 52.0);
+        //weeklySal = yearlySalary - take;
         return take;
     }
     
