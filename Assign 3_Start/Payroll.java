@@ -82,7 +82,7 @@ public class Payroll
         String ID = scan.nextLine();
         System.out.println("Enter employee's department: ");
         String dept = scan.nextLine();
-        System.out.println("Enter the employee's pay type(hourly, salary, commission: ");
+        System.out.println("Enter the employee's pay type(hourly, salary, commission): ");
         String type = scan.nextLine();
         if(type.equalsIgnoreCase("H") || type.equalsIgnoreCase("Hourly")){
             System.out.println("Enter the amount of hours the employee has worked: ");
@@ -91,11 +91,13 @@ public class Payroll
             double hourlyRate = scan.nextDouble();
             
             hour = (new Hourly(name, ID, dept, hoursWorked, hourlyRate));
+            emp.add(hour);
         }
         else if(type.equalsIgnoreCase("S") || type.equalsIgnoreCase("Salary")){
             System.out.println("Enter the employee's yearly salary: ");
             double yearlySal = scan.nextDouble();
-            hour = (new Salary(name, ID, dept, yearlySal));
+            salary = (new Salary(name, ID, dept, yearlySal));
+            emp.add(salary);
         }
         else if(type.equalsIgnoreCase("C") || type.equalsIgnoreCase("Commission")){
             System.out.println("Enter the weeks the employee has worked this month: ");
@@ -110,6 +112,10 @@ public class Payroll
             double cRate = scan.nextDouble();
             commission = (new Commission(name, ID, dept, employeeWeeks, bSalary,
                                 weekSales, yrSales, cRate));
+            emp.add(commission);
         }
+        else
+            System.out.println("Please enter hourly (or h), salary (or s), or commision (or c)");
+        
     }
 }

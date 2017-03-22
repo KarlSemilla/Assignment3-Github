@@ -7,7 +7,6 @@ public class Client
         Payroll p = new Payroll();
         p.loadData();
         // place here the code for the processing requirements
-
         System.out.println ("Thank you for using the Payroll Processing System");
     }
     
