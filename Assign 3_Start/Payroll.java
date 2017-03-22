@@ -77,7 +77,7 @@ public class Payroll
         Employee hour = new Hourly();
         Employee salary = new Salary();
         Employee commission = new Commission();
-        
+
         System.out.println("Enter employee ID: ");
         String ID = scan.nextLine();
         System.out.println("Enter employee's department: ");
@@ -89,7 +89,7 @@ public class Payroll
             double hoursWorked = scan.nextDouble();
             System.out.println("Enter the hourly rate of the employee: ");
             double hourlyRate = scan.nextDouble();
-            
+
             hour = (new Hourly(name, ID, dept, hoursWorked, hourlyRate));
             emp.add(hour);
         }
@@ -111,11 +111,60 @@ public class Payroll
             System.out.println("Enter the employee's commission rate: " );
             double cRate = scan.nextDouble();
             commission = (new Commission(name, ID, dept, employeeWeeks, bSalary,
-                                weekSales, yrSales, cRate));
+                    weekSales, yrSales, cRate));
             emp.add(commission);
         }
         else
             System.out.println("Please enter hourly (or h), salary (or s), or commision (or c)");
-        
+
+    }
+
+    public void printEmployeeInfo(String name)
+    {
+        Employee check = null;
+        check = validateName(name);
+        if(check != null){
+            check.writeData();
+        }
+        else
+            System.out.println("Employee: " + name + ", could not be found.");
+    }
+
+    public void deleteEmployeeProfile(String name)
+    {
+        Scanner scan = new Scanner(System.in);
+        Employee check = null;
+        check = validateName(name);
+        String user = "";
+        int pos = 0;
+        int i = 0;
+        if(check != null){
+            System.out.print("Delete user " + name + " from the system?(Y/N): ");
+            user = scan.next();
+            while(i == 0){
+                if(user.equalsIgnoreCase("y")){
+                    System.out.println("Employee " + name + " will be deleted.");
+                    pos = employeePosition(name);
+                    emp.remove(pos);
+                    i++;
+                }
+                else if(user.equalsIgnoreCase("n")){
+                    System.out.println("Employee " + "'" + name + "'" + " will not be deleted.");
+                    i++;
+                }
+            }
+        }
+    }
+
+    public int employeePosition(String name){
+        int y = 0;
+        for(int i = 0; i < emp.size(); i++){
+            if (emp.get(i).getName().equals(name))
+            {
+                y = i;
+            }  
+        }
+
+        return y;
     }
 }

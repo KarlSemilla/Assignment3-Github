@@ -74,6 +74,6 @@ public class Employee
     {
         System.out.println("Employee Name: " + name + "\n"
                             + "Employee ID: " + num + "\n"
-                            + "Department: " + dept + "\n");
+                            + "Department: " + dept);
     }
 }
