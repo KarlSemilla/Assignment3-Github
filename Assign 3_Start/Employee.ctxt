@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Employee()
-comment1.params=name\ num\ dept
+comment1.params=empName\ ID\ department
 comment1.target=Employee(java.lang.String,\ java.lang.String,\ java.lang.String)
 comment10.params=
 comment10.target=java.lang.String\ toString()

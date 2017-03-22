@@ -1,6 +1,6 @@
 public class Hourly extends Employee
 {
-    private int hoursWorked;
+    private double hoursWorked;
     private double hourlyRate;
     
     public Hourly()
@@ -8,14 +8,14 @@ public class Hourly extends Employee
     
     }
     
-    public Hourly(String name, String num, String dept, int hoursWorked, double hourlyRate)
+    public Hourly(String name, String num, String dept, double hoursWorked, double hourlyRate)
     {
         super(name, num, dept);
-        hoursWorked = 0;
+        hoursWorked = 0.0;
         hourlyRate = 0.0;
     }
     
-    public int getHoursWorked()
+    public double getHoursWorked()
     {
         return hoursWorked;
     }
@@ -25,7 +25,7 @@ public class Hourly extends Employee
         return hourlyRate;
     }
     
-    public void setHoursWorked(int hrWork)
+    public void setHoursWorked(double hrWork)
     {
         hourlyRate = hrWork;
     }
@@ -37,11 +37,11 @@ public class Hourly extends Employee
     
     public double calcWeeklySalary()
     {
-        int overtimeHrs = 0;
+        double overtimeHrs = 0.0;
         double overtimeRate = 0.0;
         double salary = 0.0;
-        if(hoursWorked < 40){
-            overtimeHrs = hoursWorked - 40;
+        if(hoursWorked < 40.0){
+            overtimeHrs = hoursWorked - 40.0;
             overtimeRate = (hourlyRate * 0.5) + hourlyRate;
             salary = overtimeHrs * overtimeRate;
         }

@@ -1,9 +1,11 @@
+import java.io.*;
 public class Client
 {
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
         // define necessary variables here
-
+        Payroll p = new Payroll();
+        p.loadData();
         // place here the code for the processing requirements
 
         System.out.println ("Thank you for using the Payroll Processing System");

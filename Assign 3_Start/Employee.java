@@ -10,11 +10,11 @@ public class Employee
 
     }
 
-    public Employee(String name, String num, String dept)
+    public Employee(String empName, String ID, String department)
     {
-        name = "";
-        num = "";
-        dept = "";
+        name = empName;
+        num = ID;
+        dept = department;
     }
 
     public String getName()
@@ -74,7 +74,6 @@ public class Employee
     {
         System.out.println("Employee Name: " + name + "\n"
                             + "Employee ID: " + num + "\n"
-                            + "Department: " + dept + "\n"
-                            + "Type: " + type + "\n");
+                            + "Department: " + dept + "\n");
     }
 }

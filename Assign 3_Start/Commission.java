@@ -11,14 +11,15 @@ public class Commission extends Employee
     
     }
     
-    public Commission(String name, String num, String dept, int employWeeks,
-           double baseSalary, double weeklySales, double yearlySales, double comRate)
+    public Commission(String name, String num, String dept, int employWks,
+           double bSalary, double wSales, double ySales, double cRate)
     {
         super(name, num, dept);
-        employWeeks = 0;
-        baseSalary = 0;
-        yearlySales = 0.0;
-        comRate = 0.0;
+        employWeeks = employWks;
+        baseSalary = bSalary;
+        weeklySales = wSales;
+        yearlySales = ySales;
+        comRate = cRate;
     }
     
     public int getEmployWeeks()
@@ -91,8 +92,8 @@ public class Commission extends Employee
         System.out.print("Employee weeks to date: " + employWeeks + "\n"
                            + "Employee sales this week: " + employWeeks + "\n"
                            + "Employee yearly sales: " + yearlySales + "\n"
-                           + "Employee commission rate: " + comRate
-                           + "Employee is a top seller: " + topSeller());
+                           + "Employee commission rate: " + comRate + "\n"
+                           + "Employee is a top seller: " + topSeller() + "\n");
         System.out.println();
     }
 }

@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Commission()
-comment1.params=name\ num\ dept\ employWeeks\ baseSalary\ weeklySales\ yearlySales\ comRate
+comment1.params=name\ num\ dept\ employWks\ bSalary\ wSales\ ySales\ cRate
 comment1.target=Commission(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ double,\ double,\ double,\ double)
 comment10.params=commissionRate
 comment10.target=void\ setComRate(double)
