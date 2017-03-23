@@ -66,6 +66,11 @@ public class Employee
         return 0;
     }
     
+    public boolean topSeller()
+    {
+        return false;
+    }
+    
     public String toString()
     {
         String result;

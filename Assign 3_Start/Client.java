@@ -15,6 +15,7 @@ public class Client
         //p.printEmployeeInfo("222-222-222");
         //p.printWeeklySalary("222-222-222");
         //p.printWeeklyReport();
+        p.printTopSellers();
         // place here the code for the processing requirements
         showMenu();
         System.out.println("Please choose one of the menu options: ");

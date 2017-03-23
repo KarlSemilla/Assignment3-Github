@@ -197,9 +197,20 @@ public class Payroll
             System.out.println("Employee: " + num + " was not found.");
     }
     
+    public void printTopSellers()
+    {
+        boolean verify = false;
+        System.out.println("Employees that are top sellers are: ");
+        for(int i = 0; i < emp.size(); i++){
+            verify = emp.get(i).topSeller();
+            if(verify == true){
+                System.out.println(emp.get(i).getName());
+            }
+        }
+    }
+    
     public void printWeeklyReport()
     {
-        emp.get(0).toString();
         for(int i = 0; i < emp.size(); i++){
             emp.get(i).toString();
             emp.get(i).weeklyReport();
