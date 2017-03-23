@@ -200,7 +200,6 @@ public class Payroll
     public void printTopSellers()
     {
         boolean verify = false;
-        System.out.println("Employees that are top sellers are: ");
         for(int i = 0; i < emp.size(); i++){
             verify = emp.get(i).topSeller();
             if(verify == true){
