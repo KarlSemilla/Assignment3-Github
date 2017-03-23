@@ -1,34 +1,22 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ loadData()
-<<<<<<< HEAD
 comment1.params=
 comment1.target=java.lang.String\ askUser()
-comment2.params=name
-comment2.target=Employee\ validateName(java.lang.String)
-comment3.params=name
-comment3.target=void\ addEmployee(java.lang.String)
-comment4.params=name
-comment4.target=void\ scanInfo(java.lang.String)
-comment5.params=
-comment5.target=void\ testPrint()
-numComments=6
-=======
-comment1.params=num
-comment1.target=Employee\ validateNum(java.lang.String)
 comment2.params=num
-comment2.target=void\ addEmployee(java.lang.String)
+comment2.target=Employee\ validateNum(java.lang.String)
 comment3.params=num
-comment3.target=void\ scanInfo(java.lang.String)
+comment3.target=void\ addEmployee(java.lang.String)
 comment4.params=num
-comment4.target=void\ printEmployeeInfo(java.lang.String)
+comment4.target=void\ scanInfo(java.lang.String)
 comment5.params=num
-comment5.target=void\ deleteEmployeeProfile(java.lang.String)
+comment5.target=void\ printEmployeeInfo(java.lang.String)
 comment6.params=num
-comment6.target=int\ employeePosition(java.lang.String)
+comment6.target=void\ deleteEmployeeProfile(java.lang.String)
 comment7.params=num
-comment7.target=void\ printWeeklySalary(java.lang.String)
-comment8.params=
-comment8.target=void\ printWeeklyReport()
-numComments=9
->>>>>>> origin/Karl-Branch
+comment7.target=int\ employeePosition(java.lang.String)
+comment8.params=num
+comment8.target=void\ printWeeklySalary(java.lang.String)
+comment9.params=
+comment9.target=void\ printWeeklyReport()
+numComments=10

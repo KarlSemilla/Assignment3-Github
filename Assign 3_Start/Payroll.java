@@ -44,8 +44,8 @@ public class Payroll
     public String askUser()
     {
         Scanner input = new Scanner(System.in);
-        String information = input.next();
-        return information;
+        String info = input.next();
+        return info;
     }
 
     public Employee validateNum(String num)
@@ -54,11 +54,7 @@ public class Payroll
 
         for(int i = 0; i < emp.size(); i++)
         {
-<<<<<<< HEAD
-            if (emp.get(i).getName().equalsIgnoreCase(name))
-=======
             if (emp.get(i).getNum().equals(num))
->>>>>>> origin/Karl-Branch
             {
                 foundNum = emp.get(i);
             }        
@@ -100,25 +96,15 @@ public class Payroll
             double hoursWorked = scan.nextDouble();
             System.out.println("Enter the hourly rate of the employee: ");
             double hourlyRate = scan.nextDouble();
-<<<<<<< HEAD
-            
-            hour = (new Hourly(name, ID, dept, hoursWorked, hourlyRate));
-=======
 
             hour = (new Hourly(name, num, dept, hoursWorked, hourlyRate));
->>>>>>> origin/Karl-Branch
             emp.add(hour);
         }
         else if(type.equalsIgnoreCase("S") || type.equalsIgnoreCase("Salary")){
             System.out.println("Enter the employee's yearly salary: ");
             double yearlySal = scan.nextDouble();
-<<<<<<< HEAD
-            hour = (new Salary(name, ID, dept, yearlySal));
-            emp.add(hour);
-=======
             salary = (new Salary(name, num, dept, yearlySal));
             emp.add(salary);
->>>>>>> origin/Karl-Branch
         }
         else if(type.equalsIgnoreCase("C") || type.equalsIgnoreCase("Commission")){
             System.out.println("Enter the weeks the employee has worked this month: ");
@@ -131,20 +117,6 @@ public class Payroll
             double yrSales = scan.nextDouble();
             System.out.println("Enter the employee's commission rate: " );
             double cRate = scan.nextDouble();
-<<<<<<< HEAD
-            commission = (new Commission(name, ID, dept, employeeWeeks, bSalary,
-                                weekSales, yrSales, cRate));
-            emp.add(commission);
-        }
-    }
-    
-    public void testPrint()
-    {
-        for(int i = 0; i < emp.size(); i++)
-        {
-            System.out.println(emp.get(i).getName());
-            
-=======
             commission = (new Commission(name, num, dept, employeeWeeks, bSalary,
                     weekSales, yrSales, cRate));
             emp.add(commission);
@@ -220,11 +192,17 @@ public class Payroll
                 }
                 i++;
             }
->>>>>>> origin/Karl-Branch
         }
         else 
             System.out.println("Employee: " + num + " was not found.");
     }
     
-    public void printWeeklyReport(){}
+    public void printWeeklyReport()
+    {
+        emp.get(0).toString();
+        for(int i = 0; i < emp.size(); i++){
+            emp.get(i).toString();
+            emp.get(i).weeklyReport();
+        }
+    }
 }

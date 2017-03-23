@@ -70,9 +70,14 @@ public class Employee
     {
         String result;
         
-        result = name + "   " + num + "   " + dept + "   " + type;
-        
+        result = name + "   " + num + "   " + dept;
+
         return result;
+    }
+    
+    public void weeklyReport()
+    {
+        System.out.print(name + "   " + num + "   " + dept + "   ");
     }
 
     public void writeData()
