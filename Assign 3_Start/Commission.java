@@ -8,7 +8,12 @@ public class Commission extends Employee
 
     public Commission()
     {
-
+        super();
+        employWeeks = 0;
+        baseSalary = 0.0;
+        weeklySales = 0.0;
+        yearlySales = 0.0;
+        comRate = 0.0;
     }
 
     public Commission(String name, String num, String dept, int employWks,
@@ -75,6 +80,12 @@ public class Commission extends Employee
         }
         return topSeller;
     }
+    
+    public double calcWeeklySalary()
+    {
+        double salary = baseSalary + (comRate * weeklySales);
+        return salary;
+    }
 
     public String toString()
     {
@@ -89,7 +100,7 @@ public class Commission extends Employee
     {
         super.weeklyReport();
         System.out.print("Commission" + " " + "$" + baseSalary + "\n");
-    }	
+    }   
 
     public void writeData()
     {
@@ -99,6 +110,7 @@ public class Commission extends Employee
             + "Employee yearly sales: " + yearlySales + "\n"
             + "Employee commission rate: " + comRate + "\n"
             + "Employee is a top seller: " + topSeller() + "\n");
+            
         System.out.println();
     }
 }

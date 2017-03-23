@@ -3,17 +3,20 @@ public class Hourly extends Employee
     private double hoursWorked;
     private double hourlyRate;
     private double salary;
-    
+
     public Hourly()
     {
-
+        super();
+        hoursWorked = 0.0;
+        hourlyRate = 0.0;
+        salary = 0.0;
     }
 
-    public Hourly(String name, String num, String dept, double hrWorked, double hrRate)
+    public Hourly(String name, String num, String dept, double hrRate, double hrWorked)
     {
         super(name, num, dept);
-        hoursWorked = hrWorked;
         hourlyRate = hrRate;
+        hoursWorked = hrWorked;
     }
 
     public double getHoursWorked()
@@ -42,8 +45,9 @@ public class Hourly extends Employee
         double overtimeRate = 0.0;
         if(hoursWorked > 40.0){
             overtimeHrs = hoursWorked - 40.0;
-            overtimeRate = (hourlyRate * 0.5) + hourlyRate;
-            salary = overtimeHrs * overtimeRate;
+            overtimeRate = (hourlyRate * 1.5);
+            hoursWorked = 40.0;
+            salary = (hoursWorked * hourlyRate) + (overtimeHrs * overtimeRate);
         }
         else{
             salary = hourlyRate * hoursWorked;

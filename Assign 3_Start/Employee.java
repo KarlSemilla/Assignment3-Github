@@ -7,7 +7,10 @@ public class Employee
 
     public Employee()
     {
-
+        name = "";
+        num = "";
+        dept = "";
+        type = "";
     }
 
     public Employee(String empName, String ID, String department)
@@ -66,6 +69,11 @@ public class Employee
         return 0;
     }
     
+    public boolean topSeller()
+    {
+        return false;
+    }
+    
     public String toString()
     {
         String result;
@@ -85,5 +93,10 @@ public class Employee
         System.out.println("Employee Name: " + name + "\n"
                             + "Employee ID: " + num + "\n"
                             + "Department: " + dept);
+    }
+    
+    public void endOfWeek()
+    {
+        
     }
 }
