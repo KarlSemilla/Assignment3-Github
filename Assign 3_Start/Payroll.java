@@ -215,4 +215,9 @@ public class Payroll
             emp.get(i).weeklyReport();
         }
     }
+    
+    public void endOfWeek()
+    {
+    
+    }
 }

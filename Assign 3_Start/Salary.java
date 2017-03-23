@@ -3,7 +3,8 @@ public class Salary extends Employee
     private double yearlySalary;
     public Salary()
     {
-
+        super();
+        yearlySalary = 0.0;
     }
 
     public Salary(String name, String num, String dept, double ySalary)

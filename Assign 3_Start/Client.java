@@ -14,7 +14,7 @@ public class Client
         //p.printEmployeeInfo("111-111-111");
         //p.printEmployeeInfo("222-222-222");
         //p.printWeeklySalary("222-222-222");
-        //p.printWeeklyReport();
+        p.printWeeklyReport();
         //p.printTopSellers();
         // place here the code for the processing requirements
         showMenu();
