@@ -78,7 +78,7 @@ public class Employee
     {
         String result;
         
-        result = name + "   " + num + "   " + dept;
+        result = name + "   " + num + "   " + dept + " ";
 
         return result;
     }

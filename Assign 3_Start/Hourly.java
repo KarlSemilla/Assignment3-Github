@@ -57,7 +57,8 @@ public class Hourly extends Employee
 
     public String toString()
     {
-        return "";
+        String result = super.toString() + "H" + " " + hoursWorked + "   " + hourlyRate + "   " + salary + "   ";
+        return result;
     }
 
     public void weeklyReport()
@@ -73,5 +74,10 @@ public class Hourly extends Employee
             + "Employee hourly rate: " + hourlyRate);
 
         System.out.println();      
+    }
+    
+    public void endOfWeek()
+    {
+        hoursWorked = 0.0;
     }
 }
