@@ -89,9 +89,7 @@ public class Commission extends Employee
 
     public String toString()
     {
-        super.toString();
-        String result = "";
-
+        String result = super.toString() + "C" + " " + employWeeks + "   " + baseSalary + "   " + weeklySales + "   " + comRate;
         
         return result;
     }
@@ -112,5 +110,11 @@ public class Commission extends Employee
             + "Employee is a top seller: " + topSeller() + "\n");
             
         System.out.println();
+    }
+    
+    public void endOfWeek()
+    {
+        weeklySales = 0.0;
+        employWeeks++;
     }
 }

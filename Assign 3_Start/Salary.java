@@ -34,7 +34,8 @@ public class Salary extends Employee
 
     public String toString()
     {
-        return "";
+        String result = super.toString() + "S" + " " + yearlySalary;
+        return result;
     }
 
     public void weeklyReport()
@@ -49,5 +50,10 @@ public class Salary extends Employee
         System.out.print("Employee yearly salary: " + yearlySalary);
 
         System.out.println();
+    }
+    
+    public void endOfWeek()
+    {
+    
     }
 }

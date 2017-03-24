@@ -13,6 +13,7 @@ public class Payroll
         Employee salary = new Salary();
         Employee com = new Commission();
 
+        double uni = 0.0;
         int i = 0;
         while(empFile.hasNext()){
             String name = empFile.next();
@@ -21,7 +22,8 @@ public class Payroll
             String type = empFile.next();
 
             if(type.equalsIgnoreCase("H")){
-                hour = new Hourly(name, ID, dept, empFile.nextDouble(), empFile.nextDouble());
+                //uni = enterValues(type);
+                hour = new Hourly(name, ID, dept, empFile.nextDouble(),empFile.nextDouble());
 
                 emp.add(hour);
             }
@@ -31,7 +33,8 @@ public class Payroll
                 emp.add(salary);
             }
             else{
-                com = new Commission(name, ID, dept, empFile.nextInt(), empFile.nextDouble(),
+                //uni = enterValues(type);
+                com = new Commission(name, ID, dept, empFile.nextInt(),empFile.nextDouble(),
                     empFile.nextDouble(), empFile.nextDouble(), empFile.nextDouble());
 
                 emp.add(com);
@@ -40,7 +43,24 @@ public class Payroll
         }
         empFile.close();
     }
-    
+
+    //     public double enterValues(String type)
+    //     {
+    //         Scanner scan = new Scanner(System.in);
+    //         double fill = 0;
+    //         if(type.equalsIgnoreCase("H")){
+    //             System.out.println("Enter amount of hours the employee has worked: ");
+    //             double hoursWorked = scan.nextDouble();
+    //             fill = hoursWorked;
+    //         }
+    //         else if(type.equalsIgnoreCase("C")){
+    //             System.out.println("Enter the weekly sales for this employee: ");
+    //             double weeklySales = scan.nextDouble();
+    //             fill = weeklySales;
+    //         } 
+    //         return fill;
+    //     }
+
     public String askUser()
     {
         Scanner input = new Scanner(System.in);
@@ -196,7 +216,7 @@ public class Payroll
         else 
             System.out.println("Employee: " + num + " was not found.");
     }
-    
+
     public void printTopSellers()
     {
         boolean verify = false;
@@ -207,7 +227,7 @@ public class Payroll
             }
         }
     }
-    
+
     public void printWeeklyReport()
     {
         for(int i = 0; i < emp.size(); i++){
@@ -215,9 +235,23 @@ public class Payroll
             emp.get(i).weeklyReport();
         }
     }
-    
-    public void endOfWeek()
+
+    public void endOfWeek() throws IOException
     {
-    
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the name of the file to be created: ");
+        String fileName = scan.next();
+        fileName += ".txt";
+        PrintWriter write = new PrintWriter(fileName);
+
+        for(int i = 0; i < emp.size(); i++){
+            emp.get(i).endOfWeek();
+            write.print(emp.get(i).toString());
+            if(i < emp.size()){
+                write.println();
+            }
+        }
+        System.out.println("File has finished writing.");
+        write.close();
     }
 }
