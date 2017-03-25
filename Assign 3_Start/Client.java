@@ -40,7 +40,7 @@ public class Client
                 case 'A': System.out.println("Add a new employee. Please enter the ID (Example 111-111-111):"); input = p.askUser(); p.addEmployee(input); break;
                 case 'I': System.out.println("Print Info of Individual Employee. Please enter the ID (Example 111-111-111):"); input = p.askUser(); p.printEmployeeInfo(input); break;
                 case 'D': System.out.println("Remove an Employee from Payroll. Please enter the ID (Example 111-111-111):"); input = p.askUser(); p.deleteEmployeeProfile(input); break;
-                case 'S': System.out.println("Caculate and Print the weekly pay of an employee. Please enter the ID (Example 111-111-111):");input = p.askUser(); p.printEmployeeInfo(input); break;
+                case 'S': System.out.println("Caculate and Print the weekly pay of an employee. Please enter the ID (Example 111-111-111):");input = p.askUser(); p.printWeeklySalary(input); break;
                 case 'T': System.out.println("Print: Commission Employees who are Top Sellers:"); p.printTopSellers(); break;
                 case 'P': System.out.println("prints salary report"); p.printWeeklyReport(); break;
                 case 'W': System.out.println("End of week processing"); p.endOfWeek(); break;

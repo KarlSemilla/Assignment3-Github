@@ -210,7 +210,7 @@ public class Payroll
         return y;
     }
 
-    //Prints the weekly salary
+    //Prints the weekly salary Individual
     public void printWeeklySalary(String num)
     {
         Employee check = null;
