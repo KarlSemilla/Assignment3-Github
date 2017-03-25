@@ -1,5 +1,12 @@
 import java.io.*;
 import java.util.*;
+/**
+ * Description: This is the menu class which the client will access all the options.
+ * 
+ * @author Karl Semilla / Marlon Fallorin 
+ * Date Created:
+ * Last Modified:
+ */
 public class Client
 {
     public static void main(String args[]) throws IOException
@@ -8,7 +15,11 @@ public class Client
         Payroll p = new Payroll();
         Scanner keyboard = new Scanner(System.in);
         String input = "";
-        p.loadData();
+        System.out.println("Please enter the text file that you wish to load.");
+        String loadFile = keyboard.next();
+        loadFile = loadFile + ".txt";
+        System.out.println(loadFile);
+        p.loadData(loadFile);
         //p.printEmployeeInfo("111-111-111");
         //p.deleteEmployeeProfile("111-111-111");
         //p.printEmployeeInfo("111-111-111");
@@ -26,13 +37,13 @@ public class Client
         {
             switch(choice)
             {
-                case 'A': System.out.println("Add a new employee:"); input = p.askUser(); p.addEmployee(input); break;
-                case 'I': System.out.println("Print Info of Individual Employee:"); input = p.askUser(); p.printEmployeeInfo(input); break;
-                case 'D': System.out.println("Remove an Employee from Payroll:"); input = p.askUser(); p.deleteEmployeeProfile(input); break;
-                case 'S': System.out.println("Caculate and Print the weekly pay of an employee:");input = p.askUser(); p.printEmployeeInfo(input); break;
+                case 'A': System.out.println("Add a new employee. Please enter the ID (Example 111-111-111):"); input = p.askUser(); p.addEmployee(input); break;
+                case 'I': System.out.println("Print Info of Individual Employee. Please enter the ID (Example 111-111-111):"); input = p.askUser(); p.printEmployeeInfo(input); break;
+                case 'D': System.out.println("Remove an Employee from Payroll. Please enter the ID (Example 111-111-111):"); input = p.askUser(); p.deleteEmployeeProfile(input); break;
+                case 'S': System.out.println("Caculate and Print the weekly pay of an employee. Please enter the ID (Example 111-111-111):");input = p.askUser(); p.printEmployeeInfo(input); break;
                 case 'T': System.out.println("Print: Commission Employees who are Top Sellers:"); p.printTopSellers(); break;
                 case 'P': System.out.println("prints salary report"); p.printWeeklyReport(); break;
-                case 'w': System.out.println("End of week processing"); p.endOfWeek(); break;
+                case 'W': System.out.println("End of week processing"); p.endOfWeek(); break;
                 default:
                 System.out.println("Invalid Choice.");
 

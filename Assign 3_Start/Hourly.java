@@ -1,3 +1,10 @@
+/**
+ * Description: Hourly class
+ * 
+ * @author  Karl Semilla / Marlon Fallorin 
+ * Date Created:
+ * Last Modified:
+ */
 public class Hourly extends Employee
 {
     private double hoursWorked;
@@ -39,6 +46,7 @@ public class Hourly extends Employee
         hourlyRate = hrRate;
     }
 
+    //Calulates the weekly salary and also the overtime if the employee has went over the 40 hours
     public double calcWeeklySalary()
     {
         double overtimeHrs = 0.0;
@@ -67,6 +75,7 @@ public class Hourly extends Employee
         System.out.print("Hourly" + " " + "$" + calcWeeklySalary() + "\n");
     }
 
+    //Writes to the data 
     public void writeData()
     {
         super.writeData();

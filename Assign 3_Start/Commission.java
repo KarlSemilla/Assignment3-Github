@@ -1,3 +1,10 @@
+/**
+ * Description: Commission class
+ * 
+ * @author  Karl Semilla / Marlon Fallorin 
+ * Date Created:
+ * Last Modified:
+ */
 public class Commission extends Employee
 {
     private int employWeeks;
@@ -6,6 +13,7 @@ public class Commission extends Employee
     private double yearlySales;
     private double comRate;
 
+    //default constructor
     public Commission()
     {
         super();
@@ -72,6 +80,7 @@ public class Commission extends Employee
         comRate = commissionRate;
     }
 
+    //This will check the to see who is in the top seller. 
     public boolean topSeller()
     {
         boolean topSeller = false;
@@ -81,6 +90,7 @@ public class Commission extends Employee
         return topSeller;
     }
     
+    //Calculate the weekly salary
     public double calcWeeklySalary()
     {
         double salary = baseSalary + (comRate * weeklySales);
@@ -89,7 +99,7 @@ public class Commission extends Employee
 
     public String toString()
     {
-        String result = super.toString() + "C" + " " + employWeeks + "   " + baseSalary + "   " + weeklySales + "   " + comRate;
+        String result = super.toString() + "C" + " " + employWeeks + "   " + baseSalary + "   " + weeklySales + "   " + yearlySales + "   " + comRate;
         
         return result;
     }

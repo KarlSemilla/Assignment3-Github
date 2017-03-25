@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ loadData()
+comment0.params=loadFile
+comment0.target=void\ loadData(java.lang.String)
 comment1.params=
 comment1.target=java.lang.String\ askUser()
 comment10.params=

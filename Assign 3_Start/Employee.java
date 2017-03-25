@@ -1,3 +1,10 @@
+/**
+ * Description: Employee class
+ * 
+ * @author  Karl Semilla / Marlon Fallorin 
+ * Date Created:
+ * Last Modified:
+ */
 public class Employee
 {
     protected String name;

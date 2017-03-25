@@ -1,3 +1,10 @@
+/**
+ * Description: Salary class
+ * 
+ * @author  Karl Semilla / Marlon Fallorin 
+ * Date Created:
+ * Last Modified:
+ */
 public class Salary extends Employee
 {
     private double yearlySalary;
@@ -23,6 +30,7 @@ public class Salary extends Employee
         yearlySalary = yrSalary;
     }
 
+    //Calculates the weekly salary
     public double calcWeeklySalary()
     {
         double take = 0.0;

@@ -1,12 +1,19 @@
 import java.util.*;
 import java.io.*;
+/**
+ * Description: The payroll class will access the employee class and the children classes here. 
+ * 
+ * @author  Karl Semilla / Marlon Fallorin 
+ * Date Created:
+ * Last Modified:
+ */
 public class Payroll
 {
     private ArrayList<Employee> emp = new ArrayList<Employee>();
 
-    public void loadData() throws IOException
+    public void loadData(String loadFile) throws IOException
     {
-        Scanner empFile = new Scanner(new File("in.txt"));
+        Scanner empFile = new Scanner(new File(loadFile));
 
         Employee employ = new Employee();
         Employee hour = new Hourly();
@@ -61,6 +68,7 @@ public class Payroll
     //         return fill;
     //     }
 
+    //Will ask the user for input.
     public String askUser()
     {
         Scanner input = new Scanner(System.in);
@@ -68,6 +76,7 @@ public class Payroll
         return info;
     }
 
+    //Validates the employee number. returns if they found the number
     public Employee validateNum(String num)
     {        
         Employee foundNum = null;
@@ -83,6 +92,7 @@ public class Payroll
         return foundNum;
     }
 
+    //Will check to see if the employee is already in the system. If not it will create a new employee.
     public void addEmployee(String num)
     {
         Employee check = null;
@@ -97,7 +107,8 @@ public class Payroll
             System.out.println("Employee: " + num + " was created.");
         }
     }
-
+    
+    //If the employee has not been found. It will prompt this method to make a new employee.
     public void scanInfo(String num)
     {
         Scanner scan = new Scanner(System.in);
@@ -146,6 +157,7 @@ public class Payroll
 
     }
 
+    //Will print out the employee info.
     public void printEmployeeInfo(String num)
     {
         Employee check = null;
@@ -157,6 +169,7 @@ public class Payroll
             System.out.println("Employee: " + num + ", could not be found.");
     }
 
+    //Delete an individual employee profile.
     public void deleteEmployeeProfile(String num)
     {
         Scanner scan = new Scanner(System.in);
@@ -197,6 +210,7 @@ public class Payroll
         return y;
     }
 
+    //Prints the weekly salary
     public void printWeeklySalary(String num)
     {
         Employee check = null;
@@ -217,6 +231,7 @@ public class Payroll
             System.out.println("Employee: " + num + " was not found.");
     }
 
+    //Prints who are in the topsellers 
     public void printTopSellers()
     {
         boolean verify = false;
@@ -228,6 +243,7 @@ public class Payroll
         }
     }
 
+    //Prints out the weekly report.
     public void printWeeklyReport()
     {
         for(int i = 0; i < emp.size(); i++){
@@ -236,6 +252,7 @@ public class Payroll
         }
     }
 
+    //This will print out the end of week and will ask the user to create a file.
     public void endOfWeek() throws IOException
     {
         Scanner scan = new Scanner(System.in);
