@@ -99,7 +99,7 @@ public class Commission extends Employee
 
     public String toString()
     {
-        String result = super.toString() + "C" + " " + employWeeks + "   " + baseSalary + "   " + weeklySales + "   " + yearlySales + "   " + comRate;
+        String result = super.toString() + "C" + " " + employWeeks + " " + baseSalary + " " + weeklySales + " " + yearlySales + " " + comRate;
         
         return result;
     }

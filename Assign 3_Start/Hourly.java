@@ -65,7 +65,7 @@ public class Hourly extends Employee
 
     public String toString()
     {
-        String result = super.toString() + "H" + " " + hoursWorked + "   " + hourlyRate + "   " + salary + "   ";
+        String result = super.toString() + "H" + " " + hoursWorked + " " + hourlyRate + " " + salary + " ";
         return result;
     }
 
